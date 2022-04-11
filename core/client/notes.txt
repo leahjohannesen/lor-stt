@@ -1,0 +1,37 @@
+# notes as i'm figuring out client output
+
+rough positions for zones, all top lefts in LOR coords
+
+hp
+self | (179, 481)
+opp | (179, 716)
+
+opening
+1 | (407, 730)
+4 | (1259, 730)
+y ~ 730
+
+hand y, samples, min/max
+1 | 72, 85
+2 | 78, 86
+3 | 72, 85
+4 | 67, 86
+5 | 67, 85
+6 | 67, 86
+
+board y - 260
+
+comb y - 450
+
+stack | y - 598
+
+invoke - 730
+
+opp hand y - 1252
+
+opp board y - 980
+
+opp comb y - 790
+
+confirm center | 1665, 540
+eye center | 315, 540

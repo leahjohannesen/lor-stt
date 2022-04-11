@@ -12,7 +12,7 @@ TIMEOUT = 10000
 
 def check_api():
     r = requests.get(POSITION_URL)
-    return r
+    return r.json()
 
 def test_mic():
     r = sr.Recognizer()
@@ -33,16 +33,20 @@ def test_keyboard():
     i = 0
     while i < TIMEOUT:
         if keyboard.is_pressed(PUSH_TO_TALK_KEY):
+            print(i)
             print('keypress detected, bailing')
             break
+        i += 1
     return
 
 def test_mouse():
     # right -> down -> left -> up, relative
-    mouse.move( 100,   0, absolute=False, duration=0.1)
-    mouse.move(   0, 100, absolute=False, duration=0.1)
-    mouse.move(-100,   0, absolute=False, duration=0.1)
-    mouse.move(   0,-100, absolute=False, duration=0.1)
+    n = 500
+    t = 1
+    mouse.move( n, 0, absolute=False, duration=t)
+    mouse.move( 0, n, absolute=False, duration=t)
+    mouse.move(-n, 0, absolute=False, duration=t)
+    mouse.move( 0,-n, absolute=False, duration=t)
     return
 
 if __name__ == '__main__':

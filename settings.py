@@ -1,0 +1,5 @@
+PORT = 21337
+LOCAL_BASE = f'http://127.0.0.1:{PORT}'
+POSITION_URL = f'{LOCAL_BASE}/positional-rectangles'
+PUSH_TO_TALK_KEY = 'q'
+TIMEOUT = 10000
